@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #333, #666);
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .section {
+            flex: 0 1 calc(33.33% - 40px);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section img {
+            width: 200px; /* Adjust image width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+        }
+        .try-now-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .try-now-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to our EduMate</h1>
+</header>
+
+<nav>
+    <a href="/">Home</a> 
+    <a href="/login">Signup/Login</a>
+    <a href="/courses">Courses</a>
+    <a href="/road">Roadmap Generator</a>
+    <a href="/study">Study Planner</a>
+    <a href="/chatbot2">EduChat</a>
+    <a href="/tutor">Online Tutor</a>
+    <a href="/note">Notes Summarizer</a>
+    <a href="/edcrowd">Crowd funding</a>
+    <a href="/youtube">youtube summariser</a>
+</nav>
+
+<div class="section-container">
+    <div class="section" id="courses">
+        <h2>Featured Courses</h2>
+        <img src="{{ url_for('static', filename='course.gif') }}" alt="courses">
+        <p>Explore our selection of online courses.</p>
+        <a href="/courses"><button class="try-now-button">Try Now</button></a>
+    </div>
+
+    <div class="section" id="generator">
+    <h2>Roadmap Generator</h2>
+    <img src="{{ url_for('static', filename='onl.gif') }}" alt="roadmap">
+    <p>Create a customized study roadmap to achieve your learning goals.</p>
+    <a href="/road"><button class="try-now-button">Try Now</button></a>
+</div>
+
+    <div class="section" id="planner">
+    <h2>Study Planner</h2>
+    <img src="{{ url_for('static', filename='notes.gif') }}" alt="study">
+    <p>Plan your study sessions efficiently with our study planner.</p>
+    <a href="/study"><button class="try-now-button">Try Now</button></a>
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="section" id="chat">
+        <h2>EduChat</h2>
+        <img src="{{ url_for('static', filename='ai.png') }}" alt="study">
+        <p>Engage in educational discussions and seek assistance through our chat platform.</p>
+        <a href="/chatbot2"><button class="try-now-button">Try Now</button></a>
+    </div>
+
+    <div class="section" id="voice">
+        <h2>Online Tutor</h2>
+        <img src="{{ url_for('static', filename='online_tutor.jpg') }}" alt="study">
+        <p>Online tutoring session through gmeet</p>
+        <a href="/tutor"><button class="try-now-button">Try Now</button></a>
+    </div>
+
+    <div class="section" id="summarizer">
+        <h2>Notes Summarizer</h2>
+        <img src="{{ url_for('static', filename='study.gif') }}" alt="study">
+        <p>Generate concise summaries of your study materials for better understanding.</p>
+        <a href="/note"><button class="try-now-button">Try Now</button></a>
+    </div>
+</div>
+
+</body>
+</html>
